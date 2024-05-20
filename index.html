@@ -261,9 +261,33 @@ p{
 	    #back{
 		    margin-left: 50px;
 	    }
-        
-
     </style>
+	
+        <script>
+        function changeLanguage(lang) {
+            // Define language-specific content
+            var content = {
+                "en": {
+                    "greeting": "Hello!",
+                    "message": "Welcome to our website."
+                },
+                "fr": {
+                    "greeting": "Bonjour!",
+                    "message": "Bienvenue sur notre site web."
+                },
+                "es": {
+                    "greeting": "¡Hola!",
+                    "message": "Bienvenido a nuestro sitio web."
+                }
+                // Add more languages and content as needed
+            };
+
+            // Change content based on selected language
+            document.getElementById('greeting').innerText = content[lang]['greeting'];
+            document.getElementById('message').innerText = content[lang]['message'];
+        }
+    </script>
+
 
 </head>
 
@@ -282,6 +306,17 @@ p{
         <h2>Welcome to BENSSA TRADING (Pty) LTD</h2> <a href="https://api.whatsapp.com/send?phone=%2B27848399943&data=ARArWsDNitpWZheDda1cy78LTY1BSsjPn6c5_YJ492M1sTHf3qNvD9NDIKQxi_jQQN-PvMdjncOxTtlHWB-y1_5s_Igx-9PST05H4AMjusDB4CCMF_-stHU1mlAIxp1cleMGK6mV5_FgCKuf0aYLcvM4Vw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR35dsDp1hRv3XR7CKfl_JQFM9sFJfqnGRnaL3AUPwHv1xIcT_6wOcCfSX0"><img id="whatsapp" src="images/whats.jpeg">Contact Us<a/> <a href="https://web.facebook.com/"><img id="facebook" src="images/facebook.jpg"></a><br><br>
 
             <br>
+		<br>
+		
+<h1 id="greeting">Hello!</h1>
+<p id="message">Welcome to our website.</p>
+
+<select onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+    <!-- Add more languages here -->
+</select><br><br>
 
         <div class="grid">
 
