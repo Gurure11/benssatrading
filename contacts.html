@@ -1,180 +1,505 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>N.G.D Lindiwe Hair Salon</title>
-	<style type="text/css">
-		#main-body{
-		background-image: url(images/i.jpeg);
-		background-size: cover;
-		color: white;
-		align-items: center;
-		text-align: center;
-
-
-		}
-		#send{
-			color: white;
-			background-color: blue;
-			padding: 5px;
-			border-radius: 5px;
-			border: none;
-		}
-		#send:hover{
-			color: red;
-			background-color: black;
-		}
-		#home{
-			margin-right: 20px;
-			color: blue;
-			
-		}
-		#about{
-
-			color: blue;
-			background-color: white;
-		}
-		#face{
-			width: 30px;
-			border-radius: 10px;
-		}
-		#map:hover{
-			color: red;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: green;
-		}
-		#whatsapp{
-			width: 50px;
-			border-radius: 5px;
-		}
-		#about:hover{
-			color: green;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			
-		}
-		#home:hover{
-			color: white;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: blue;
-		}
-		#furniture{
-			margin-right: 20px;
-			color: white;
-
-		}
-		#about{
-			margin-right: 20px;
-			color: blue;
-		}
-
-		#curtains{
-			margin-right: 20px;
-			color: white;
-
-	}
-		#:hover{
-		color: blue;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: white;
-
-	}
-	#about:hover{
-		color: blue;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: white;
-	}
-	#curtains:hover{
-		color:  blue;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: white;
-	}
-		h2{
-			text-decoration: underline;
-			color: white;
-		}
-		#carseats{
-			color: white;
-			margin-right: 20px;
-		}
-		#carseats:hover{
-			color: blue;
-			cursor: pointer;
-			transition: 0.15s;
-			opacity: 0.7;
-			background-color: white;
-		}
-	</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Solly's Skills Driving Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .contact-hero {
+            height: 40vh;
+            background: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 1rem auto;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-detail i {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+        
+        .contact-detail div h4 {
+            margin-bottom: 0.3rem;
+            color: var(--primary);
+        }
+        
+        .branches-list {
+            margin-top: 2rem;
+        }
+        
+        .branches-list h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .branch-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .branch-item::before {
+            content: '\f3c5';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
-<body id="main-body">
-	<h2>N.G.D LINDIWE HAIR SALON</h2><br>
-	<hr>
-	<br>
-	<br>
-		<a id="home" href="index.html">Home</a>
-		<a id="about" href="details.html">About Us</a>
-		
-		
-		
-	<br>
-	<br>
-	<form action="https://formsubmit.co/bothwell.gurure11@gmail.com" method="POST">
-			<div>
-			
-			<label>Name</label>
-			<input type="text" name="firstName" placeholder="Enter first name"><br>
-			<br>
-			<label>Surname</label>
-			<input type="text" name="lastName" placeholder="Enter Surname"><br>
-			<br>
-			<label>Contact Number</label>
-			<input type="Number" placeholder="cell no."><br><br>
-			<label>EMAIL</label>
-			<input type="email" name="EMAIL" placeholder="EMAIL">
-			<hr>
-			<label>Message</label>
-			<textarea type="text area" name="Message" placeholder="Message"></textarea><br>
-			<br>
-			<button id="send" input="submit">Submit</button><br>
-		</div>
-	</form>
-	<br>
-	<br>
-	Technician:  Lindiwe<br>
-	Email: 		ngdsalon@gmail.com<br>
-	Cell: 		083 690 0899/ 078 729 7450<br>
-	Address:    
-				Natal Spruit<br>
-				Johanesburg<br>
-				Gauteng <br>
-			        
-	
-			 <br>
-	<a id="map" href="">Map Click Me</a>
-	<br>
-	<br>
-
-	<br> <a href="https://web.facebook.com/noah.zhou.31"><img id="face" src="images/facebook.jpg" target="_blank"></a><br>
-	<br>
-	<a href="https://api.whatsapp.com/send?phone=%2B27787297450&data=ARArWsDNitpWZheDda1cy78LTY1BSsjPn6c5_YJ492M1sTHf3qNvD9NDIKQxi_jQQN-PvMdjncOxTtlHWB-y1_5s_Igx-9PST05H4AMjusDB4CCMF_-stHU1mlAIxp1cleMGK6mV5_FgCKuf0aYLcvM4Vw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR35dsDp1hRv3XR7CKfl_JQFM9sFJfqnGRnaL3AUPwHv1xIcT_6wOcCfSX0"><img id="whatsapp" src="images/whats.jpeg"><a/>
-		<br>
-		<br>
-		<br>
-
-
+<body>
+    <header>
+        <div class="logo">Solly's Skills Driving Academy</div>
+        <div class="tagline">"Your Journey to Road Safety Starts Here"</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#branches">Our Branches</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get In Touch With Us</h1>
+            <p>We're here to answer your questions and help you start your driving journey</p>
+        </div>
+    </section>
+    
+    <div class="contact-container">
+        <h2 class="section-title">Contact Information</h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Our Contact Details</h3>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <h4>Owner</h4>
+                        <p>Mr. S. Montoedi</p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>solomonmotoedi@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone Numbers</h4>
+                        <p>082 768 7889</p>
+                        <p>078 011 9125</p>
+                        <p>016 023 0048</p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Operating Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 8:00 AM - 1:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="branches-list">
+                    <h4>Our Branches</h4>
+                    <div class="branch-item">
+                        <strong>Main Branch - Vanderbijlpark</strong><br>
+                        54 President Kruger Street, Russels Building
+                    </div>
+                    <div class="branch-item">
+                        <strong>Sebokeng Branch</strong><br>
+                        Opposite Thabong Mall
+                    </div>
+                    <div class="branch-item">
+                        <strong>Vereeniging Branch</strong><br>
+                        Merriman Street, Opposite Home Affairs
+                    </div>
+                    <div class="branch-item">
+                        <strong>Bedworthpark Branch</strong><br>
+                        VUT Small Gate Entrance
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="branch">Preferred Branch</label>
+                        <select id="branch" name="branch">
+                            <option value="">Select a branch</option>
+                            <option value="Vanderbijlpark">Main Branch - Vanderbijlpark</option>
+                            <option value="Sebokeng">Sebokeng Branch</option>
+                            <option value="Vereeniging">Vereeniging Branch</option>
+                            <option value="Bedworthpark">Bedworthpark Branch</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="Code 1">Code 1 - Bike License</option>
+                            <option value="Code 8">Code 8 - Car License</option>
+                            <option value="Code 10">Code 10 - Truck License</option>
+                            <option value="Code 14">Code 14 - Heavy Truck License</option>
+                            <option value="Brush-up">Brush-up Lessons</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/solly'sskillsdrivingacademy" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/27827687889" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:solomonmotoedi@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:0827687889" aria-label="Phone">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1234567890123!2d27.837456!3d-26.654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDM5JzE1LjYiTiAyN8KwNTAnMTQuOSJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Solly's Skills Driving Academy. All Rights Reserved.</p>
+        <p>"Your Journey to Road Safety Starts Here"</p>
+    </footer>
 </body>
 </html>
